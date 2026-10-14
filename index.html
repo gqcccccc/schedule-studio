@@ -1,0 +1,199 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>行程工作室 | Schedule Studio</title><style>
+*{box-sizing:border-box}body{margin:0;background:#edf4ff;color:#15336a;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.top{max-width:1350px;margin:auto;padding:30px 22px 14px;display:flex;justify-content:space-between;align-items:center;gap:12px}.top h1{font-size:25px;margin:0}.sub{font-size:13px;color:#6482b2;margin-top:5px}.shell{max-width:1350px;margin:0 auto;padding:10px 22px 50px;display:grid;grid-template-columns:415px minmax(0,1fr);gap:20px}.panel{background:white;border:1px solid #dce8fa;border-radius:20px;padding:21px;box-shadow:0 10px 36px #7199d719}.panel h2{font-size:17px;margin:0 0 16px}label{display:block;font-size:13px;font-weight:600;margin:12px 0 5px}.field{width:100%;border:1px solid #d6e2f4;background:#f9fbff;color:#15336a;border-radius:10px;padding:10px 12px;outline-color:#4d88e8}.cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}.avatarline{display:flex;align-items:center;gap:12px;margin:8px 0 15px}.avatarprev{width:56px;height:56px;border-radius:50%;object-fit:cover;background:#e0edff;border:2px solid #cbdffb}.small{font-size:12px;color:#8296ba}.btn{border:0;border-radius:11px;padding:11px 15px;background:#325bb5;color:white;font-weight:650}.btn.secondary{color:#325bb5;background:#eaf2ff}.btn.danger{color:#ad4061;background:#ffeef4}.btnrow{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.divider{border-top:1px solid #ebf0f9;margin:22px 0}.entry{background:#f8fbff;border:1px solid #deebff;border-radius:14px;padding:13px;margin:12px 0}.draghandle{border:0;background:#e3edfd;color:#4c75b6;border-radius:8px;padding:6px 10px;cursor:grab;touch-action:none;font-size:19px;line-height:1}.draghandle:active{cursor:grabbing}.entry.dragging{opacity:.4;border:2px dashed #7aa3e7}.entry.drop-target{border:2px solid #4e80dd;background:#e8f1ff}.entryhead{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:750}.entry input,.entry select{margin-top:5px}.num{color:#7193c4}.remove{background:transparent;color:#b14f6b;border:0;font-size:12px}.error{color:#bd3657;font-size:12px;margin-top:5px}.previewpanel{background:#dfeafb;border-radius:20px;padding:16px;display:flex;align-items:flex-start;justify-content:center;overflow:auto}.poster{width:660px;max-width:100%;background:linear-gradient(146deg,#f4faff 0%,#e4f0ff 58%,#ecedff 100%);border-radius:18px;padding:29px;position:relative;overflow:hidden;box-shadow:0 18px 45px #7394ce40}.poster:before{content:"";position:absolute;width:320px;height:320px;border:1px solid #ffffffb7;border-radius:50%;top:-180px;right:-100px;box-shadow:0 0 0 35px #ffffff38,0 0 0 90px #ffffff30;pointer-events:none}.posterhead{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:143px;gap:15px}.eyebrow{background:#d8e7ff;border-radius:40px;display:inline-block;padding:5px 12px;letter-spacing:1px;font-size:12px}.posterhead h2{font-size:44px;letter-spacing:4px;color:#284e9f;margin:12px 0 0;line-height:1.08}.english{letter-spacing:5px;color:#6c9cdb;font-size:12px;margin:10px 0}.motto{font-size:13px;color:#4b70ad;margin-top:9px}.bigavatar{width:128px;height:128px;border-radius:50%;object-fit:cover;border:5px solid white;box-shadow:0 6px 20px #729bdb4d;background:#dae9fd}.avatarplaceholder{width:128px;height:128px;background:#e6f2ff;border:4px solid white;border-radius:50%;display:grid;place-items:center;font-size:48px;color:#82a8de}.posterlist{position:relative;display:grid;gap:8px;margin-top:17px}.schedulecard{border-radius:14px;background:#ffffffdf;display:grid;grid-template-columns:177px 95px minmax(0,1fr);gap:10px;align-items:center;min-height:64px;box-shadow:0 4px 12px #95b5e62b;overflow:hidden}.when{align-self:stretch;background:#bad4f4;padding:8px 12px}.day{font-size:18px;font-weight:800;letter-spacing:0;white-space:nowrap;display:flex;align-items:center;gap:3px;min-width:0}.day .date-text{white-space:nowrap;font-size:20px;letter-spacing:-.45px}.time{font-size:11px;margin-top:8px;color:#6c89b9}.type{background:#d8efff;color:#285e9e;font-size:12px;font-weight:700;text-align:center;border-radius:22px;padding:5px 3px}.type.t2{background:#f0e0ff;color:#7655b2}.type.t3{background:#ffe6ef;color:#a44e87}.type.t4{background:#dcf5e8;color:#287554}.type.t5{background:#fff0d4;color:#966316}.type.t6{background:#e5e9ff;color:#505aa5}.ico{width:12px;height:12px;vertical-align:-2px;margin-right:3px;display:inline-block}.when .day .ico{width:14px;height:14px;margin-right:2px;flex-shrink:0}.venue .ico{width:12px;height:12px}.date-text{display:inline-block}.description{padding:6px 8px 6px 0;min-width:0}.act{font-size:16px;font-weight:800;color:#123778;overflow-wrap:anywhere}.venue{font-size:11px;color:#7190be;margin-top:3px;overflow-wrap:anywhere}.empty{border:2px dashed #b8cff2;color:#7896bf;text-align:center;border-radius:14px;padding:28px 8px;font-size:13px}.footer{display:flex;justify-content:space-between;gap:10px;font-size:10px;letter-spacing:1px;color:#7196ce;border-top:1px solid #b8ceee;margin-top:20px;padding-top:13px}.hint{font-size:12px;color:#6481ad;margin:10px 0}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);color:white;background:#264a8f;padding:12px 20px;border-radius:14px;z-index:99;display:none}@media(max-width:950px){.shell{grid-template-columns:1fr}.top{padding-bottom:4px}.previewpanel{padding:12px}.poster{width:660px}.panel{padding:16px}}@media(max-width:530px){.shell{padding:8px 10px 35px}.poster{padding:16px}.posterhead h2{font-size:30px}.bigavatar,.avatarplaceholder{width:85px;height:85px}.schedulecard{grid-template-columns:132px 64px minmax(0,1fr);gap:6px;min-height:60px}.when{padding:10px 6px}.day{font-size:13px}.day .date-text{font-size:16px;letter-spacing:-.55px}.when .day .ico{width:11px;height:11px;margin-right:1px}.time{font-size:9px;margin-top:6px}.type{font-size:10px;padding:6px 2px}.act{font-size:13px}.venue{font-size:9px}.footer{font-size:8px}}
+
+.cropbackdrop{position:fixed;inset:0;background:#14294dba;z-index:100;display:none;align-items:center;justify-content:center;padding:16px}.cropbackdrop.open{display:flex}.cropdialog{width:min(440px,100%);background:white;border-radius:20px;padding:20px;box-shadow:0 20px 80px #132b50a0}.cropdialog h3{margin:0 0 7px}.cropstage{position:relative;width:min(340px,100%);aspect-ratio:1;margin:16px auto;border-radius:12px;overflow:hidden;background:#d4e3f7;touch-action:none;cursor:grab}.cropstage:active{cursor:grabbing}.cropstage canvas{width:100%;height:100%;display:block}.cropdialog input[type=range]{width:100%;accent-color:#467cc9}.cropcontrols{display:flex;align-items:center;gap:12px}.cropcontrols label{margin:0;white-space:nowrap}.cropbuttons{display:flex;justify-content:flex-end;gap:9px;margin-top:16px}.entry.dragging{opacity:.65}.entry.drag-live{box-shadow:0 0 0 2px #648fe2,0 12px 20px #8aaced44;background:#eef5ff}.avatarline button{margin-top:7px;padding:6px 9px;font-size:12px}
+
+/* The primary actions remain visible while editing a long schedule. */
+.top{position:sticky;top:0;z-index:25;max-width:none;padding:13px max(22px, calc((100vw - 1306px)/2));background:rgba(246,250,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid #dce8fa;box-shadow:0 5px 20px #7199d711}
+.top-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;justify-content:flex-end}
+.top-actions .btn{white-space:nowrap}
+.top-actions .resetbtn{background:transparent;color:#7186aa;border:1px solid #d4e1f4;font-size:12px}
+.top-actions .resetbtn:hover{background:#f1f5fb}
+@media(max-width:800px){.top{align-items:flex-start;flex-wrap:wrap;padding:12px 14px}.top-actions{width:100%;justify-content:flex-start}.top-actions .btn{padding:9px 12px;font-size:12px}}
+
+/* Show local-storage guidance beside its related save action. */
+.savegroup{display:flex;align-items:center;gap:10px;min-width:0}
+.privacy-note{display:block;max-width:245px;font-size:11px;line-height:1.45;color:#6c82a4}
+@media(max-width:1050px){.privacy-note{max-width:180px}}
+@media(max-width:800px){.savegroup{flex-wrap:wrap;gap:5px}.privacy-note{max-width:260px}}
+
+.project-colors{margin-top:18px;padding:15px;border:1px solid #d9e7fa;border-radius:14px;background:#f7faff}
+.project-colors h3{font-size:14px;margin:0 0 5px;color:#284e9f}
+.project-color-row{display:flex;align-items:center;gap:10px;margin-top:9px;padding:8px 10px;background:white;border-radius:10px;border:1px solid #e1eafb}
+.project-color-name{flex:1;min-width:0;font-weight:650;font-size:13px;overflow-wrap:anywhere}
+.project-color-picker{width:40px;height:32px;padding:2px;border:1px solid #d2dded;background:#fff;border-radius:7px;cursor:pointer}
+.project-color-reset{font-size:12px;background:#edf3fc;border:0;border-radius:7px;color:#5574a4;padding:7px 9px}
+.project-colors .small{line-height:1.6}
+</style></head><body><header class="top"><div><h1>✦ 行程工作室</h1><div class="sub">简单填写，实时生成你的专属赛季行程海报</div></div><div class="top-actions"><button class="btn" id="export" type="button">↓ 导出 PNG 海报</button><div class="savegroup"><button class="btn secondary" id="save" type="button">保存到浏览器</button><span class="privacy-note">本工具不上传你的头像和行程。内容会在本机自动暂存，清除浏览器数据可能导致丢失。</span></div><button class="btn secondary" id="backup-export" type="button">⇩ 导出 JSON 备份</button><button class="btn secondary" id="backup-import" type="button">⇧ 导入 JSON 备份</button><input id="backup-file" type="file" accept=".json,application/json" hidden aria-label="选择 JSON 备份文件"><button class="btn resetbtn" id="reset" type="button">清空重新开始</button></div></header><main class="shell"><section class="panel"><h2>01 · 基础信息</h2><label for="user">用户名</label><input id="user" class="field" placeholder="例如 MuaLou" maxlength="40"><label for="season">赛季 / 年份</label><input id="season" class="field" placeholder="例如 2026-2027" maxlength="50"><label>头像（可选）</label><div class="avatarline"><img id="avatarprev" class="avatarprev" alt="头像预览"><div><input id="avatar" type="file" accept="image/*" style="max-width:210px;font-size:12px"><div class="small">支持 PNG / JPG / WebP；可移动和缩放裁剪区域</div><button class="btn secondary" id="recrop" type="button" style="display:none">重新选择裁剪区域</button></div></div><div class="divider"></div><h2>02 · 行程条目 <span id="count" class="small"></span></h2><div id="entries"></div><button class="btn secondary" id="add">＋ 添加行程条目</button><div class="project-colors"><h3>🎨 项目颜色</h3><div class="small">自动识别已有项目；点击色块调整颜色，同名项目统一生效。可恢复默认颜色。</div><div id="project-color-list"></div></div><p class="hint">拖动条目左上角的「⠿」实时调整顺序；六项至少填写一项，其余可留空。</p></section><section class="previewpanel"><div class="poster" id="poster"><div class="posterhead"><div><div class="eyebrow" id="postername">你的名字 · 赛季</div><h2>赛季行程</h2><div class="english">SEASON SCHEDULE</div><div class="motto">把每一次奔赴，都写进热爱的赛季里。</div></div><div id="posteravatar" class="avatarplaceholder">✦</div></div><div class="posterlist" id="posterlist"><div class="empty">点击「添加行程条目」开始编辑 ✦</div></div><div class="footer"><span>LOVE THE GAME · KEEP THE PASSION</span><span>持续更新 / 以官方信息为准</span></div></div></section></main><div class="toast" id="toast"></div><div class="cropbackdrop" id="cropbackdrop"><div class="cropdialog" role="dialog" aria-modal="true" aria-label="裁剪头像"><h3>裁剪头像</h3><div class="small">拖动图片调整位置，拖动滑块调整大小。圆形内是最终头像区域。</div><div class="cropstage" id="cropstage"><canvas id="cropcanvas" width="340" height="340"></canvas></div><div class="cropcontrols"><label for="cropzoom">缩放</label><input type="range" id="cropzoom" min="1" max="3" step="0.01" value="1"><span class="small" id="zoomlabel">100%</span></div><div class="cropbuttons"><button class="btn secondary" id="cropcancel" type="button">取消</button><button class="btn" id="cropapply" type="button">使用此头像</button></div></div></div><script>
+(()=>{'use strict';const $=id=>document.getElementById(id);let rows=[],avatarURL='',uid=0,customColors={};const keys=['date','weekday','time','category','show','venue'];const labels=['日期','星期','时间','项目','演出','场馆'];
+const icons={calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',pin:'<path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>'};
+function icon(name){return `<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]}</svg>`}
+function typeStyle(type){let t=type.trim().toLowerCase();if(/速滑|滑冰|冰球|冰雪|花滑/.test(t))return {cl:'t2',bg:'#e7ddfc',fg:'#7655b2'};if(/演唱|音乐|演出|歌剧|音乐剧/.test(t))return {cl:'t3',bg:'#ffe6ef',fg:'#a44e87'};if(/游泳|跳水|水上/.test(t))return {cl:'t4',bg:'#dcf5e8',fg:'#287554'};if(/篮球|足球|田径|跑步/.test(t))return {cl:'t5',bg:'#fff0d4',fg:'#966316'};if(/排球|男排|女排|联赛/.test(t))return {cl:'',bg:'#d8efff',fg:'#285e9e'};let hash=0;for(const ch of t)hash=(hash*31+ch.charCodeAt(0))>>>0;let colors=[{cl:'t6',bg:'#e5e9ff',fg:'#505aa5'},{cl:'t4',bg:'#dcf5e8',fg:'#287554'},{cl:'t5',bg:'#fff0d4',fg:'#966316'},{cl:'t3',bg:'#ffe6ef',fg:'#a44e87'},{cl:'t2',bg:'#e7ddfc',fg:'#7655b2'}];return colors[hash%colors.length]}
+function categoryKey(type){return String(type||'').trim().toLowerCase()}
+const originalTypeStyle=typeStyle;
+typeStyle=function(type){const key=categoryKey(type),custom=customColors[key];if(custom&&/^#[0-9a-f]{6}$/i.test(custom))return {cl:'',bg:custom,fg:contrastText(custom)};return originalTypeStyle(type)};
+function contrastText(hex){const rgb=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255).map(c=>c<=.04045?c/12.92:Math.pow((c+.055)/1.055,2.4));return .2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]>.48?'#23375a':'#ffffff'}
+function renderProjectColors(){const names=new Map();for(const r of rows){const name=(r.category||'').trim();if(name&&!names.has(categoryKey(name)))names.set(categoryKey(name),name)}$('project-color-list').innerHTML=names.size?[...names].map(([key,name])=>{const fallback=originalTypeStyle(name).bg,chosen=customColors[key]||fallback;return `<div class="project-color-row"><span class="project-color-name">${esc(name)}</span><input type="color" class="project-color-picker" data-project-color="${esc(key)}" value="${chosen}" aria-label="设置 ${esc(name)} 的颜色" title="选择项目颜色"><button type="button" class="project-color-reset" data-reset-project="${esc(key)}" ${!customColors[key]?'disabled style="opacity:.35"':''}>恢复默认</button></div>`}).join(''):'<div class="small" style="margin-top:10px">填写行程中的「项目」字段后，这里会出现颜色设置。</div>'}
+$('project-color-list').addEventListener('input',e=>{if(!e.target.matches('[data-project-color]'))return;customColors[e.target.dataset.projectColor]=e.target.value;renderPoster()});
+$('project-color-list').addEventListener('change',e=>{if(e.target.matches('[data-project-color]'))renderProjectColors()});
+$('project-color-list').addEventListener('click',e=>{const btn=e.target.closest('[data-reset-project]');if(!btn)return;delete customColors[btn.dataset.resetProject];renderProjectColors();renderPoster()});
+function esc(v){return String(v||'').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]))}function notify(v){$('toast').textContent=v;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',2800)}function save(){try{localStorage.setItem('schedule_studio_v1',JSON.stringify({name:$('user').value,season:$('season').value,rows,avatarURL,customColors}))}catch(e){console.warn(e)}}function renderEntries(){ $('entries').innerHTML=rows.map((r,i)=>`<div class="entry" draggable="true" data-id="${r.id}"><div class="entryhead"><span><button type="button" class="draghandle" draggable="true" aria-label="拖拽调整行程顺序" title="拖动调整顺序">⠿</button> 行程 ${i+1} <span class="num">#${r.id}</span></span><button class="remove" data-remove="${r.id}">删除条目 ×</button></div><div class="cols">${keys.map((k,j)=>`<div><label>${labels[j]}</label><input class="field" data-key="${k}" value="${esc(r[k])}" placeholder="${['如 11.12','如 星期四','如 20:00','如 男排','如 北京 vs 上海','如 光彩体育馆'][j]}"></div>`).join('')}</div><div class="error" data-error="${r.id}"></div></div>`).join('');$('count').textContent=`共 ${rows.length} 条`;renderProjectColors()};function renderPoster(){ $('postername').textContent=($('user').value.trim()||'你的名字')+' · '+($('season').value.trim()||'赛季');$('posteravatar').outerHTML=avatarURL?`<img class="bigavatar" id="posteravatar" src="${avatarURL}" alt="头像">`:'<div class="avatarplaceholder" id="posteravatar">✦</div>';$('posterlist').innerHTML=rows.length?rows.map(r=>{const detail=r.show||r.category||'未命名行程',type=r.category||'行程',sty=typeStyle(type);return `<div class="schedulecard"><div class="when"><div class="day">${r.date?`<span class="date-text">${esc(r.date)}</span>`:''}</div><div class="time">${r.weekday?icon('calendar')+esc(r.weekday):''}${r.weekday&&r.time?' · ':''}${r.time?icon('clock')+esc(r.time):''}</div></div><span class="type ${sty.cl}" style="background:${sty.bg};color:${sty.fg}">${esc(type)}</span><div class="description"><div class="act">${esc(detail)}</div>${r.venue?`<div class="venue">${icon('pin')}${esc(r.venue)}</div>`:''}</div></div>`}).join(''):'<div class="empty">点击「添加行程条目」开始编辑 ✦</div>';save()};
+function add(){rows.push({id:++uid,...Object.fromEntries(keys.map(k=>[k,'']))});renderEntries();renderPoster()};$('add').onclick=add;$('entries').addEventListener('input',e=>{const box=e.target.closest('.entry');if(!box||!e.target.dataset.key)return;const row=rows.find(r=>r.id===Number(box.dataset.id));row[e.target.dataset.key]=e.target.value;if(e.target.dataset.key==='category')renderProjectColors();const err=box.querySelector('[data-error]');if(err)err.textContent='';renderPoster()});let draggingId=null;const entriesEl=$('entries');
+function syncVisualOrder(){const ids=[...entriesEl.querySelectorAll('.entry')].map(el=>Number(el.dataset.id));if(ids.length!==rows.length)return;const lookup=new Map(rows.map(r=>[r.id,r]));rows=ids.map(id=>lookup.get(id)).filter(Boolean);entriesEl.querySelectorAll('.entry').forEach((el,i)=>{const num=el.querySelector('.entryhead .num');const head=el.querySelector('.entryhead');if(head&&head.firstElementChild){const span=head.firstElementChild;for(const n of span.childNodes){if(n.nodeType===Node.TEXT_NODE&&n.textContent.includes('行程')){n.textContent=' 行程 '+(i+1)+' ';break}}}});renderPoster()}
+function moveLive(item,y){if(!item||!item.classList.contains('entry'))return;const active=entriesEl.querySelector('.entry.dragging');if(!active||active===item)return;const box=item.getBoundingClientRect();const before=y<box.top+box.height/2;entriesEl.insertBefore(active,before?item:item.nextSibling);syncVisualOrder()}
+entriesEl.addEventListener('dragstart',e=>{const item=e.target.closest('.entry');if(!item)return;draggingId=Number(item.dataset.id);e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',String(draggingId));requestAnimationFrame(()=>item.classList.add('dragging','drag-live'))});
+entriesEl.addEventListener('dragover',e=>{if(draggingId===null)return;e.preventDefault();e.dataTransfer.dropEffect='move';const item=e.target.closest('.entry');if(item)moveLive(item,e.clientY)});
+function endReorder(){if(draggingId===null)return;draggingId=null;entriesEl.querySelectorAll('.entry').forEach(el=>el.classList.remove('dragging','drag-live'));syncVisualOrder();renderEntries()}
+entriesEl.addEventListener('drop',e=>{if(draggingId===null)return;e.preventDefault();endReorder()});entriesEl.addEventListener('dragend',endReorder);
+let touchId=null,touchPointer=null;
+entriesEl.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'||!e.target.closest('.draghandle'))return;const item=e.target.closest('.entry');if(!item)return;touchId=Number(item.dataset.id);touchPointer=e.pointerId;item.classList.add('dragging','drag-live');e.target.setPointerCapture(e.pointerId)});
+entriesEl.addEventListener('pointermove',e=>{if(touchId===null||e.pointerId!==touchPointer)return;e.preventDefault();const target=document.elementFromPoint(e.clientX,e.clientY)?.closest('.entry');if(target&&entriesEl.contains(target))moveLive(target,e.clientY)});
+function endTouch(){if(touchId===null)return;touchId=null;touchPointer=null;entriesEl.querySelectorAll('.entry').forEach(el=>el.classList.remove('dragging','drag-live'));syncVisualOrder();renderEntries()}
+entriesEl.addEventListener('pointerup',endTouch);entriesEl.addEventListener('pointercancel',endTouch);
+$('entries').addEventListener('click',e=>{const b=e.target.closest('[data-remove]');if(!b)return;rows=rows.filter(r=>r.id!==Number(b.dataset.remove));renderEntries();renderPoster()});['user','season'].forEach(k=>$(k).addEventListener('input',renderPoster));// Cropping stores the selection as a rendered square bitmap, matching preview and exported PNG.
+let cropImg=null,cropSource='',cropZoom=1,cropX=0,cropY=0,cropDragging=false,cropLastX=0,cropLastY=0;
+const cropCanvas=$('cropcanvas'),cropCtx=cropCanvas.getContext('2d'),cropStage=$('cropstage');
+function cropBase(){return cropImg?Math.max(340/cropImg.naturalWidth,340/cropImg.naturalHeight):1}
+function cropClamp(){if(!cropImg)return;const w=cropImg.naturalWidth*cropBase()*cropZoom,h=cropImg.naturalHeight*cropBase()*cropZoom;cropX=Math.max((340-w)/2,Math.min((w-340)/2,cropX));cropY=Math.max((340-h)/2,Math.min((h-340)/2,cropY))}
+function cropDraw(){if(!cropImg)return;cropClamp();const w=cropImg.naturalWidth*cropBase()*cropZoom,h=cropImg.naturalHeight*cropBase()*cropZoom;cropCtx.clearRect(0,0,340,340);cropCtx.drawImage(cropImg,170-w/2+cropX,170-h/2+cropY,w,h);cropCtx.fillStyle='rgba(13,32,68,.43)';cropCtx.beginPath();cropCtx.rect(0,0,340,340);cropCtx.arc(170,170,155,0,Math.PI*2,true);cropCtx.fill('evenodd');cropCtx.beginPath();cropCtx.arc(170,170,155,0,Math.PI*2);cropCtx.strokeStyle='white';cropCtx.lineWidth=3;cropCtx.stroke()}
+function openCrop(src){const img=new Image();img.onload=()=>{cropImg=img;cropSource=src;cropX=cropY=0;cropZoom=1;$('cropzoom').value='1';$('zoomlabel').textContent='100%';$('cropbackdrop').classList.add('open');cropDraw()};img.onerror=()=>notify('图片无法读取');img.src=src}
+$('avatar').addEventListener('change',e=>{const file=e.target.files?.[0];if(!file)return;if(!file.type.startsWith('image/')){notify('请上传图片文件');return}if(file.size>6*1024*1024){notify('头像请小于 6MB');return}const reader=new FileReader;reader.onload=()=>openCrop(String(reader.result));reader.readAsDataURL(file)});
+$('recrop').onclick=()=>{if(cropSource)openCrop(cropSource)};
+$('cropzoom').oninput=e=>{cropZoom=Number(e.target.value);$('zoomlabel').textContent=Math.round(cropZoom*100)+'%';cropDraw()};
+cropStage.addEventListener('pointerdown',e=>{cropDragging=true;cropLastX=e.clientX;cropLastY=e.clientY;cropStage.setPointerCapture(e.pointerId)});
+cropStage.addEventListener('pointermove',e=>{if(!cropDragging)return;const ratio=340/cropStage.getBoundingClientRect().width;cropX+=(e.clientX-cropLastX)*ratio;cropY+=(e.clientY-cropLastY)*ratio;cropLastX=e.clientX;cropLastY=e.clientY;cropDraw()});
+cropStage.addEventListener('pointerup',()=>cropDragging=false);cropStage.addEventListener('pointercancel',()=>cropDragging=false);
+$('cropcancel').onclick=()=>{$('cropbackdrop').classList.remove('open');$('avatar').value=''};
+$('cropapply').onclick=()=>{if(!cropImg)return;cropClamp();const out=document.createElement('canvas');out.width=out.height=512;const cx=out.getContext('2d');const w=cropImg.naturalWidth*cropBase()*cropZoom,h=cropImg.naturalHeight*cropBase()*cropZoom;cx.drawImage(cropImg,(170-w/2+cropX-15)*512/310,(170-h/2+cropY-15)*512/310,w*512/310,h*512/310);avatarURL=out.toDataURL('image/png');$('avatarprev').src=avatarURL;$('recrop').style.display='inline-block';$('cropbackdrop').classList.remove('open');renderPoster()};
+// 可迁移的完整本地备份。沿用旧版 schedule_studio_v1 存储结构，以保持兼容。
+function backupPayload(){return {name:$('user').value,season:$('season').value,rows:rows.map(r=>({id:r.id,...Object.fromEntries(keys.map(k=>[k,r[k]||'']))})),avatarURL,customColors:{...customColors}}}
+$('backup-export').onclick=()=>{
+  if(!valid())return;
+  try{
+    const payload={format:'schedule-studio-backup',version:1,exportedAt:new Date().toISOString(),data:backupPayload()};
+    const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json;charset=utf-8'});
+    const url=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=url;a.download=`schedule-studio-backup-${new Date().toISOString().slice(0,10)}.json`;
+    document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+    notify('已导出 JSON 备份，请妥善保存');
+  }catch(e){console.error(e);notify('备份导出失败，请重试')}
+};
+$('backup-import').onclick=()=>$('backup-file').click();
+$('backup-file').addEventListener('change',async e=>{
+  const file=e.target.files?.[0];e.target.value='';if(!file)return;
+  try{
+    if(file.size>15*1024*1024)throw Error('备份文件过大（最大 15 MB）');
+    const raw=JSON.parse(await file.text());
+    if(!raw||typeof raw!=='object'||Array.isArray(raw))throw Error('备份格式不正确');
+    if(raw.format!==undefined&&raw.format!=='schedule-studio-backup')throw Error('不是行程工作室的备份文件');
+    if(raw.version!==undefined&&raw.version!==1)throw Error('暂不支持此备份版本');
+    const data=raw.format==='schedule-studio-backup'?raw.data:raw;
+    if(!data||typeof data!=='object'||Array.isArray(data)||!Array.isArray(data.rows))throw Error('缺少行程数据');
+    if(data.rows.length>2000)throw Error('行程条目过多');
+    if(typeof data.name!=='string'||typeof data.season!=='string')throw Error('用户名或赛季格式不正确');
+    if(data.name.length>40||data.season.length>50)throw Error('用户名或赛季文字过长');
+    const incomingRows=data.rows.map((r,i)=>{
+      if(!r||typeof r!=='object'||Array.isArray(r))throw Error(`第 ${i+1} 条行程格式错误`);
+      const obj={id:i+1};
+      for(const k of keys){if(r[k]!==undefined&&typeof r[k]!=='string')throw Error(`第 ${i+1} 条行程字段无效`);obj[k]=r[k]||'';if(obj[k].length>2000)throw Error(`第 ${i+1} 条行程文字过长`)}
+      return obj;
+    });
+    if(data.avatarURL!==undefined&&typeof data.avatarURL!=='string')throw Error('头像格式错误');
+    const nextAvatar=data.avatarURL||'';
+    if(nextAvatar&&!/^data:image\/(png|jpeg|webp);base64,[a-z\d+/=]+$/i.test(nextAvatar))throw Error('头像数据格式不支持');
+    const nextColors={};
+    if(data.customColors!==undefined){
+      if(!data.customColors||typeof data.customColors!=='object'||Array.isArray(data.customColors))throw Error('项目颜色格式错误');
+      for(const [k,v] of Object.entries(data.customColors)){
+        if(k.length>150||!/^#[0-9a-f]{6}$/i.test(v))throw Error('项目颜色无效');
+        nextColors[k]=v;
+      }
+    }
+    if(!confirm(`将导入 ${incomingRows.length} 条行程。此操作会覆盖当前用户名、头像、行程和项目颜色，是否继续？\n\n建议先导出当前 JSON 备份。`))return;
+    $('user').value=data.name;$('season').value=data.season;
+    rows=incomingRows;uid=rows.length;avatarURL=nextAvatar;customColors=nextColors;
+    $('avatar').value='';$('avatarprev').removeAttribute('src');
+    if(avatarURL)$('avatarprev').src=avatarURL;
+    $('recrop').style.display='none';cropSource='';cropImg=null;
+    renderEntries();renderPoster();notify(`成功恢复 ${rows.length} 条行程`);
+  }catch(err){console.error(err);alert('导入失败：'+err.message+'。现有内容未更改。')}
+});
+$('save').onclick=()=>{if(!valid())return;save();notify('已保存到此浏览器')};function valid(){const invalid=rows.filter(r=>!keys.some(k=>String(r[k]).trim()));document.querySelectorAll('[data-error]').forEach(e=>e.textContent=invalid.some(r=>r.id===Number(e.dataset.error))?'至少填写一个字段':'' );if(invalid.length){notify(`有 ${invalid.length} 条行程为空，请补充或删除`);return false}return true};$('reset').onclick=()=>{if(!confirm('确定清空用户名、头像与所有行程吗？'))return;rows=[];customColors={};avatarURL='';$('user').value='';$('season').value='';$('avatar').value='';$('avatarprev').removeAttribute('src');cropSource='';cropImg=null;$('recrop').style.display='none';renderEntries();renderPoster()};$('export').onclick=async()=>{
+  if(!valid())return;
+  const button=$('export');button.disabled=true;button.textContent='正在生成 PNG…';
+  try{
+    let canvas;
+    try { canvas=await posterCanvas(); }
+    catch (captureError) {
+      console.warn('网页截图方式不可用，自动切换稳定 Canvas 导出：',captureError);
+      canvas=await reliableCanvasExport();
+    }
+    const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error('PNG 编码失败')),'image/png'));
+    const url=URL.createObjectURL(blob);
+    const link=document.createElement('a');link.href=url;
+    link.download=($('user').value.trim()||'我的')+'-赛季行程.png';
+    document.body.appendChild(link);link.click();link.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),15000);
+    notify('导出成功：图片排版与当前海报预览一致');
+  }catch(error){console.error('PNG export failed',error);notify('PNG 导出失败：'+(error?.message||'未知错误'));alert('PNG 导出失败：'+(error?.message||'未知错误'));}
+  finally{button.disabled=false;button.textContent='↓ 导出 PNG 海报';}
+};
+// PNG 的唯一排版源是 #poster 本身，不再维护第二套 Canvas 绘制坐标。
+// 把每个节点的实际计算样式内联后通过 SVG foreignObject 绘入高清 Canvas。
+// 因此自定义项目颜色、日期字号、星期图标、头像、行高、自动换行与预览保持一致。
+async function posterCanvas(){
+  await document.fonts.ready;
+  const source=$('poster');
+  // 在超窄手机端直接按当前预览尺寸导出，避免重新套用另一种响应式布局。
+  const rect=source.getBoundingClientRect();
+  const width=Math.ceil(source.offsetWidth),height=Math.ceil(source.scrollHeight);
+  if(!width||!height)throw new Error('海报未正确布局');
+  if(width*height>16000000)throw new Error('海报内容过长，请减少条目分批导出');
+  const clone=source.cloneNode(true);
+  const props=['font','font-family','font-size','font-style','font-weight','line-height','letter-spacing','color','background','background-color','background-image','background-position','background-size','border','border-radius','box-shadow','box-sizing','padding','margin','width','height','min-width','min-height','max-width','max-height','display','grid-template-columns','grid-template-rows','grid-gap','column-gap','row-gap','align-items','justify-content','justify-items','flex','flex-direction','flex-wrap','flex-shrink','flex-grow','overflow','overflow-wrap','word-break','white-space','text-align','vertical-align','position','top','right','bottom','left','opacity','transform','object-fit','object-position','text-decoration','text-transform'];
+  const originals=[source,...source.querySelectorAll('*')],copies=[clone,...clone.querySelectorAll('*')];
+  for(let i=0;i<originals.length;i++){
+    const computed=getComputedStyle(originals[i]);
+    let inline='';
+    for(const prop of props){const value=computed.getPropertyValue(prop);if(value)inline+=prop+':'+value+';';}
+    copies[i].setAttribute('style',inline);
+    if(copies[i].tagName?.toLowerCase()==='img'){
+      const src=originals[i].currentSrc||originals[i].src;
+      if(src)copies[i].setAttribute('src',src);
+    }
+  }
+  // CSS ::before 装饰不会随 cloneNode 复制，在副本中补一层，保证背景装饰也能出现在 PNG。
+  const pseudo=getComputedStyle(source,'::before');
+  if(pseudo.content&&pseudo.content!=='none'&&pseudo.content!=='normal'){
+    const deco=document.createElement('div');
+    let inline='';
+    for(const prop of props){const value=pseudo.getPropertyValue(prop);if(value)inline+=prop+':'+value+';';}
+    deco.setAttribute('style',inline+'pointer-events:none;');clone.insertBefore(deco,clone.firstChild);
+  }
+  clone.style.width=width+'px';clone.style.height=height+'px';clone.style.maxWidth='none';
+  clone.style.margin='0';clone.style.boxShadow='none';
+  // html/XML 双方兼容的序列化；头像使用原本的 data: URL，可离线导出。
+  clone.setAttribute('xmlns','http://www.w3.org/1999/xhtml');
+  const markup=new XMLSerializer().serializeToString(clone);
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><foreignObject x="0" y="0" width="100%" height="100%">${markup}</foreignObject></svg>`;
+  const svgUrl=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}));
+  try{
+    const image=new Image();
+    await new Promise((resolve,reject)=>{image.onload=resolve;image.onerror=()=>reject(new Error('SVG 渲染失败'));image.src=svgUrl;});
+    const ratio=Math.min(3,Math.max(2,1080/width));
+    const canvas=document.createElement('canvas');
+    canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);
+    const ctx=canvas.getContext('2d');
+    if(!ctx)throw new Error('Canvas 不可用');
+    ctx.scale(ratio,ratio);ctx.drawImage(image,0,0,width,height);
+    // 提前读取一个像素，确保跨域或 SVG 限制在导出前就能报告。
+    const probe=ctx.getImageData(Math.min(canvas.width-1,Math.floor(canvas.width/2)),Math.min(canvas.height-1,Math.floor(canvas.height/3)),1,1).data;
+    if(probe[3]===0)throw new Error('SVG 渲染为空白图片');
+    return canvas;
+  }finally{URL.revokeObjectURL(svgUrl);}
+}
+async function reliableCanvasExport(){const W=1080,p=55,header=265,h=112,gap=11,footer=90,H=header+Math.max(1,rows.length)*(h+gap)+footer;const c=document.createElement('canvas');c.width=W;c.height=H;const ctx=c.getContext('2d');const grad=ctx.createLinearGradient(0,0,W,H);grad.addColorStop(0,'#f3faff');grad.addColorStop(.6,'#e0efff');grad.addColorStop(1,'#eeeaff');ctx.fillStyle=grad;ctx.fillRect(0,0,W,H);ctx.strokeStyle='#ffffff9c';ctx.lineWidth=3;for(let n=0;n<3;n++){ctx.beginPath();ctx.arc(1000,-80,120+n*85,0,Math.PI*2);ctx.stroke()}function rr(x,y,w,h,r,color){ctx.fillStyle=color;ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill()}function tx(s,x,y,size,color,bold=false,maxwidth){ctx.font=`${bold?'700':'400'} ${size}px system-ui, "Microsoft YaHei", sans-serif`;ctx.fillStyle=color;ctx.fillText(String(s),x,y,maxwidth)}function fit(s,max,size,bold=false){ctx.font=`${bold?'700':'400'} ${size}px system-ui, "Microsoft YaHei", sans-serif`;return ctx.measureText(String(s)).width<=max?size:Math.max(16,size*max/ctx.measureText(String(s)).width)}rr(54,32,435,48,25,'#d5e5fd');tx(($('user').value||'你的名字')+' · '+($('season').value||'赛季'),77,64,24,'#284e9e',true,390);tx('赛 季 行 程',57,160,78,'#2850a0',true);tx('S E A S O N    S C H E D U L E',60,200,24,'#80a9df');tx('把每一次奔赴，都写进热爱的赛季里。',60,240,25,'#426cb0');if(avatarURL){const img=new Image();img.src=avatarURL;await img.decode();ctx.save();ctx.beginPath();ctx.arc(926,135,97,0,Math.PI*2);ctx.clip();ctx.drawImage(img,829,38,194,194);ctx.restore();ctx.strokeStyle='#fff';ctx.lineWidth=8;ctx.beginPath();ctx.arc(926,135,97,0,Math.PI*2);ctx.stroke()}else{rr(845,48,160,160,80,'#d5e6fb');tx('✦',898,158,78,'#8aace4')}
+function drawIcon(name,x,y,scale=1,color='#688cbd'){ctx.save();ctx.translate(x,y);ctx.scale(scale,scale);ctx.strokeStyle=color;ctx.lineWidth=2;ctx.lineCap='round';ctx.lineJoin='round';ctx.beginPath();if(name==='calendar'){ctx.roundRect(1,4,20,18,2);ctx.moveTo(1,10);ctx.lineTo(21,10);ctx.moveTo(6,1);ctx.lineTo(6,7);ctx.moveTo(16,1);ctx.lineTo(16,7)}else if(name==='clock'){ctx.arc(11,11,9,0,Math.PI*2);ctx.moveTo(11,5);ctx.lineTo(11,11);ctx.lineTo(15,13)}else if(name==='pin'){ctx.moveTo(11,23);ctx.bezierCurveTo(4,15,2,13,2,9);ctx.arc(11,9,9,Math.PI,0);ctx.bezierCurveTo(20,13,18,15,11,23);ctx.moveTo(14,9);ctx.arc(11,9,3,0,Math.PI*2)}ctx.stroke();ctx.restore()}
+const list=rows.length?rows:[{date:'',time:'',weekday:'',category:'',show:'',venue:''}];list.forEach((r,i)=>{const y=header+i*(h+gap);rr(48,y,W-96,h,24,'#ffffffec');rr(48,y,283,h,24,'#bad4f4');rr(307,y,24,h,0,'#bad4f4');const date=r.date||'待定';if(r.date){tx(date,74,y+51,fit(date,236,44,true),'#1f4386',true,236)}if(r.weekday){drawIcon('calendar',74,y+78,.74);tx(r.weekday,98,y+94,19,'#6e8eb9',false,112)}if(r.time){const xx=r.weekday?205:74;drawIcon('clock',xx,y+78,.75);tx(r.time,xx+24,y+94,19,'#6e8eb9',false,96)}const type=r.category||'行程',sty=typeStyle(type);rr(353,y+32,166,48,26,sty.bg);tx(type,371,y+63,fit(type,125,26,true),sty.fg,true,130);const main=r.show||r.category||'待填写';tx(main,543,y+50,fit(main,413,35,true),'#123474',true,417);if(r.venue){drawIcon('pin',543,y+68,.75);tx(r.venue,570,y+88,fit(r.venue,375,22),'#6d8bb8',false,378)}});const yy=header+list.length*(h+gap)+32;ctx.strokeStyle='#b2cbef';ctx.beginPath();ctx.moveTo(60,yy-19);ctx.lineTo(1020,yy-19);ctx.stroke();tx('LOVE THE GAME · KEEP THE PASSION',60,yy+18,19,'#638ccf');tx('持续更新 / 如有调整以官方信息为准',660,yy+18,18,'#638ccf');return c}
+try{const data=JSON.parse(localStorage.getItem('schedule_studio_v1')||'null');if(data){$('user').value=data.name||'';$('season').value=data.season||'';rows=Array.isArray(data.rows)?data.rows.map((r,i)=>({id:Number(r.id)||i+1,...Object.fromEntries(keys.map(k=>[k,String(r[k]||'')]))})):[];uid=Math.max(0,...rows.map(r=>r.id));avatarURL=data.avatarURL||'';customColors=data.customColors&&typeof data.customColors==='object'?Object.fromEntries(Object.entries(data.customColors).filter(([k,v])=>typeof k==='string'&&/^#[0-9a-f]{6}$/i.test(v))):{};if(avatarURL){$('avatarprev').src=avatarURL}}}catch(e){}renderEntries();renderPoster();})();
+</script></body></html>
